@@ -1,0 +1,37 @@
+Para crear la tabla de conceptos
+
+CREATE TABLE `concepts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_hybrid` char(255) NOT NULL,
+  `pxordx` char(1) NOT NULL,
+  `oldpxordx` char(1),
+  `codetype` char(3) NOT NULL,
+  `concept_class_id` char(20),
+  `concept_id` int(11),
+  `vocabulary_id` char(20) NOT NULL,
+  `domain_id` varchar(20) NOT NULL,
+  `track` varchar(20),
+  `standard_concept` char(1),
+  `code` varchar(30) NOT NULL,
+  `codewithperiods` varchar(30),
+  `codescheme` char(20),
+  `long_desc` varchar(500),
+  `short_desc` varchar(500),
+  `code_status` char(1),
+  `code_change` char(30),
+  `code_change_year` year(4),
+  `code_planned_type` char(20),
+  `code_billing_status` char(1),
+  `code_cms_claim_status` char(1),
+  `sex_cd` char(1),
+  `anat_or_cond` char(1),
+  `poa_code_status` char(30),
+  `poa_code_change` char(255),
+  `poa_code_change_year` year(4),
+  `valid_start_date` char(8),
+  `valid_end_date` char(8),
+  `invalid_reason` char(255),
+  `create_dt` int(11),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+

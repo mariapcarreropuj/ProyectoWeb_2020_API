@@ -1,0 +1,132 @@
+2020-09-08 18:00:23,428 - INFO - Connecting to database...
+2020-09-08 18:00:23,434 - INFO - The connection to the database was succesfull
+2020-09-08 18:00:23,434 - INFO - Getting all current vocabularies from database
+2020-09-08 18:00:23,435 - INFO - processing file ../files/vocabularies/vocabularies02.csv
+2020-09-08 18:00:23,438 - INFO - Inserting vocabulary ref CVX in database.
+2020-09-08 18:00:23,439 - INFO - Inserting vocabulary ref MS-DRG in database.
+2020-09-08 18:00:23,441 - INFO - Inserting vocabulary ref HCPCS in database.
+2020-09-08 18:00:23,442 - INFO - Inserting vocabulary ref ICD10CM in database.
+2020-09-08 18:00:23,443 - INFO - Inserting vocabulary ref ICD10PCS in database.
+2020-09-08 18:00:23,444 - INFO - Inserting vocabulary ref ICD9CM in database.
+2020-09-08 18:00:23,445 - INFO - Inserting vocabulary ref ICD9Proc in database.
+2020-09-08 18:00:23,445 - INFO - processing file ../files/vocabularies/vocabularies01.csv
+2020-09-08 18:00:23,446 - INFO - Inserting vocabulary ref ABMS in database.
+2020-09-08 18:00:23,447 - INFO - Inserting vocabulary ref APC in database.
+2020-09-08 18:00:23,449 - INFO - Inserting vocabulary ref ATC in database.
+2020-09-08 18:00:23,450 - INFO - Inserting vocabulary ref CPT4 in database.
+2020-09-08 18:00:23,450 - INFO - Completed processing of files
+2020-09-08 18:01:49,519 - INFO - Connecting to database...
+2020-09-08 18:01:49,525 - INFO - The connection to the database was succesfull
+2020-09-08 18:01:49,525 - INFO - Getting all current vocabularies from database
+2020-09-08 18:01:49,526 - INFO - processing file ../files/vocabularies/vocabularies02.csv
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref CVX already exists in database.
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref MS-DRG already exists in database.
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref HCPCS already exists in database.
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref ICD10CM already exists in database.
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref ICD10PCS already exists in database.
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref ICD9CM already exists in database.
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref ICD9Proc already exists in database.
+2020-09-08 18:01:49,526 - INFO - processing file ../files/vocabularies/vocabularies01.csv
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref ABMS already exists in database.
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref APC already exists in database.
+2020-09-08 18:01:49,526 - INFO - Vocabulary ref ATC already exists in database.
+2020-09-08 18:01:49,527 - INFO - Vocabulary ref CPT4 already exists in database.
+2020-09-08 18:01:49,527 - INFO - Completed processing of files
+2020-09-22 17:26:03,897 - INFO - Connecting to database...
+2020-09-22 17:26:03,934 - INFO - The connection to the database was succesfull
+2020-09-22 17:26:03,934 - INFO - Getting all current vocabularies from database
+2020-09-22 17:26:03,936 - INFO - processing file ../files/vocabularies/vocabularies01.csv
+2020-09-22 17:26:03,949 - INFO - Inserting vocabulary ref ABMS in database.
+2020-09-22 17:26:03,963 - INFO - Inserting vocabulary ref APC in database.
+2020-09-22 17:26:03,965 - INFO - Inserting vocabulary ref ATC in database.
+2020-09-22 17:26:03,967 - INFO - Inserting vocabulary ref CPT4 in database.
+2020-09-22 17:26:03,967 - INFO - processing file ../files/vocabularies/vocabularies02.csv
+2020-09-22 17:26:03,969 - INFO - Inserting vocabulary ref CVX in database.
+2020-09-22 17:26:03,971 - INFO - Inserting vocabulary ref MS-DRG in database.
+2020-09-22 17:26:03,972 - INFO - Inserting vocabulary ref HCPCS in database.
+2020-09-22 17:26:03,973 - INFO - Inserting vocabulary ref ICD10CM in database.
+2020-09-22 17:26:03,975 - INFO - Inserting vocabulary ref ICD10PCS in database.
+2020-09-22 17:26:03,984 - INFO - Inserting vocabulary ref ICD9CM in database.
+2020-09-22 17:26:03,987 - INFO - Inserting vocabulary ref ICD9Proc in database.
+2020-09-22 17:26:03,987 - INFO - Completed processing of files
+2020-09-22 17:27:54,282 - INFO - Connecting to database...
+2020-09-22 17:27:54,305 - INFO - The connection to the database was succesfull
+2020-09-22 17:27:54,306 - INFO - Getting all current vocabularies from database
+2020-09-22 17:27:54,307 - INFO - processing file ../files/vocabularies/vocabularies01.csv
+2020-09-22 17:27:54,307 - INFO - Vocabulary ref ABMS already exists in database.
+2020-09-22 17:27:54,307 - INFO - Vocabulary ref APC already exists in database.
+2020-09-22 17:27:54,307 - INFO - Vocabulary ref ATC already exists in database.
+2020-09-22 17:27:54,307 - INFO - Vocabulary ref CPT4 already exists in database.
+2020-09-22 17:27:54,307 - INFO - processing file ../files/vocabularies/vocabularies02.csv
+2020-09-22 17:27:54,308 - INFO - Vocabulary ref CVX already exists in database.
+2020-09-22 17:27:54,308 - INFO - Vocabulary ref MS-DRG already exists in database.
+2020-09-22 17:27:54,308 - INFO - Vocabulary ref HCPCS already exists in database.
+2020-09-22 17:27:54,308 - INFO - Vocabulary ref ICD10CM already exists in database.
+2020-09-22 17:27:54,308 - INFO - Vocabulary ref ICD10PCS already exists in database.
+2020-09-22 17:27:54,308 - INFO - Vocabulary ref ICD9CM already exists in database.
+2020-09-22 17:27:54,308 - INFO - Vocabulary ref ICD9Proc already exists in database.
+2020-09-22 17:27:54,308 - INFO - Completed processing of files
+2020-09-28 22:52:00,641 - INFO - Connecting to database...
+2020-09-28 22:52:00,660 - INFO - The connection to the database was succesfull
+2020-09-28 22:52:00,660 - INFO - Getting all current vocabularies from database
+2020-09-28 22:52:00,661 - INFO - processing file ./received_files/vocabulary/vocabulary_1hAmILJWUsMULDDj2g65BbTMPL_IEUev6_20200928225159.csv
+2020-09-28 22:52:00,663 - INFO - Inserting vocabulary ref ABMS in database.
+2020-09-28 22:52:00,665 - INFO - Inserting vocabulary ref APC in database.
+2020-09-28 22:52:00,666 - INFO - Inserting vocabulary ref ATC in database.
+2020-09-28 22:52:00,669 - INFO - Inserting vocabulary ref CPT4 in database.
+2020-09-28 22:52:00,671 - INFO - Inserting vocabulary ref CVX in database.
+2020-09-28 22:52:00,673 - INFO - Inserting vocabulary ref MS-DRG in database.
+2020-09-28 22:52:00,675 - INFO - Inserting vocabulary ref HCPCS in database.
+2020-09-28 22:52:00,677 - INFO - Inserting vocabulary ref ICD10CM in database.
+2020-09-28 22:52:00,680 - INFO - Inserting vocabulary ref ICD10PCS in database.
+2020-09-28 22:52:00,681 - INFO - Inserting vocabulary ref ICD9CM in database.
+2020-09-28 22:52:00,683 - INFO - Inserting vocabulary ref ICD9Proc in database.
+2020-09-28 22:52:00,684 - INFO - Completed processing of file
+2020-09-28 23:49:37,968 - INFO - Connecting to database...
+2020-09-28 23:49:37,973 - INFO - The connection to the database was succesfull
+2020-09-28 23:49:37,973 - INFO - Getting all current vocabularies from database
+2020-09-28 23:49:37,973 - INFO - processing file ./received_files/vocabulary/vocabulary_1hAmILJWUsMULDDj2g65BbTMPL_IEUev6_20200928234937.csv
+2020-09-28 23:49:37,976 - INFO - Inserting vocabulary ref ABMS in database.
+2020-09-28 23:49:37,979 - INFO - Inserting vocabulary ref APC in database.
+2020-09-28 23:49:37,989 - INFO - Inserting vocabulary ref ATC in database.
+2020-09-28 23:49:37,999 - INFO - Inserting vocabulary ref CPT4 in database.
+2020-09-28 23:49:38,008 - INFO - Inserting vocabulary ref CVX in database.
+2020-09-28 23:49:38,010 - INFO - Inserting vocabulary ref MS-DRG in database.
+2020-09-28 23:49:38,039 - INFO - Inserting vocabulary ref HCPCS in database.
+2020-09-28 23:49:38,043 - INFO - Inserting vocabulary ref ICD10CM in database.
+2020-09-28 23:49:38,051 - INFO - Inserting vocabulary ref ICD10PCS in database.
+2020-09-28 23:49:38,168 - INFO - Inserting vocabulary ref ICD9CM in database.
+2020-09-28 23:49:38,170 - INFO - Inserting vocabulary ref ICD9Proc in database.
+2020-09-28 23:49:38,170 - INFO - Completed processing of file
+2020-09-29 10:22:31,961 - INFO - Connecting to database...
+2020-09-29 10:22:31,975 - INFO - The connection to the database was succesfull
+2020-09-29 10:22:31,975 - INFO - Getting all current vocabularies from database
+2020-09-29 10:22:31,977 - INFO - processing file ./received_files/vocabulary/vocabulary_1hAmILJWUsMULDDj2g65BbTMPL_IEUev6_20200929102230.csv
+2020-09-29 10:22:31,977 - INFO - Vocabulary ref ABMS already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref APC already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref ATC already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref CPT4 already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref CVX already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref MS-DRG already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref HCPCS already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref ICD10CM already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref ICD10PCS already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref ICD9CM already exists in database.
+2020-09-29 10:22:31,978 - INFO - Vocabulary ref ICD9Proc already exists in database.
+2020-09-29 10:22:31,978 - INFO - Completed processing of file
+2020-10-01 21:06:17,526 - INFO - Connecting to database...
+2020-10-01 21:06:17,542 - INFO - The connection to the database was succesfull
+2020-10-01 21:06:17,542 - INFO - Getting all current vocabularies from database
+2020-10-01 21:06:17,543 - INFO - processing file ./received_files/vocabulary/vocabulary_1hAmILJWUsMULDDj2g65BbTMPL_IEUev6_20201001210616.csv
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref ABMS already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref APC already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref ATC already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref CPT4 already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref CVX already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref MS-DRG already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref HCPCS already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref ICD10CM already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref ICD10PCS already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref ICD9CM already exists in database.
+2020-10-01 21:06:17,544 - INFO - Vocabulary ref ICD9Proc already exists in database.
+2020-10-01 21:06:17,544 - INFO - Completed processing of file

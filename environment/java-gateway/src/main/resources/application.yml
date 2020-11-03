@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.cloud.gateway: ERROR
+    org.springframework.http.server.reactive: ERROR
+    org.springframework.web.reactive: ERROR
+    reactor.ipc.netty: ERROR
+    reactor.netty: ERROR
+
+services:
+  users: http://192.168.56.120:8080
+  concepts: http://192.168.56.119:8080
