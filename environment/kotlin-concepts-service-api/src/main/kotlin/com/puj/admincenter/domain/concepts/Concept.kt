@@ -107,5 +107,5 @@ data class Concept(
     val createDt: Int? = 0,
 
     @Column(nullable = false)
-    val conceptState: Int = 1
+    val conceptState: Int? = 1
 )

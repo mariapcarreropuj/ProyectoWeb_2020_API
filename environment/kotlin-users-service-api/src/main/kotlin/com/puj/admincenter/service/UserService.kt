@@ -58,8 +58,8 @@ class UserService(private val userRepository: UserRepository) {
     }
 
     fun create(createUserDto: CreateUserDto): ResponseEntity<*> {
-        if (userRepository.existsByEmail(createUserDto.email)) {
-            val messageError = "User with email: ${createUserDto.email} already exists."
+        if (userRepository.existsByEmail(createUserDto.email) || userRepository.existsByUsername(createUserDto.username)) {
+            val messageError = "User with email: ${createUserDto.email} and/or username: ${createUserDto.username} already exists."
             LOG.error(messageError)
             return ResponseEntity<Any>(messageError,
                                        HttpStatus.CONFLICT)
@@ -89,37 +89,28 @@ class UserService(private val userRepository: UserRepository) {
                                                                 encodedPassword)
                 return if (user != null) {
 
-                    LOG.info("found user $user")
-                    val jwtToken = getJWTToken(modifyUserDto.username)
-            
-                    println("tokenJwt: $jwtToken")
-
-                    val token =  TokenDto(jwtToken,
-                                        user.id)
-                    LOG.info("Token $token for user $user generated")
-
                     val encodedPassword = BCrypt.hashpw(modifyUserDto.newPassword,BCrypt.gensalt());
                     val userSaved = userRepository.updatePasswordByUser(modifyUserDto.username, encodedPassword)
-                    ResponseEntity<TokenDto>(token,
-                                            HttpStatus.OK)
-
+                    val message ="The password has been changed for User ${modifyUserDto.username}."
+                    LOG.info(message)
+                    return ResponseEntity.ok(message)
 
                 } else {
-                    val message = "the user does not exist or is not enabled" 
+                    val message = "The user does not exist or is not enabled" 
                     LOG.error(message)
                     ResponseEntity<String>(message,
                                         HttpStatus.NOT_FOUND)
                 }
             }
             else {
-                    val message = "the password provided for this user is not valid" 
+                    val message = "The password provided for this user is not valid" 
                     LOG.error(message)
                     ResponseEntity<String>(message,
                                         HttpStatus.NOT_FOUND)
                 }
             }
         else {
-                val message = "the user does not exist or is not enabled" 
+                val message = "The user does not exist or is not enabled" 
                 LOG.error(message)
                 ResponseEntity<String>(message,
                                     HttpStatus.NOT_FOUND)

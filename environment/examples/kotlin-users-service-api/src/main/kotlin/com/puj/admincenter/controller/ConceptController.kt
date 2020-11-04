@@ -1,7 +1,7 @@
 package com.puj.admincenter.controller
 
 import com.puj.admincenter.domain.concepts.Concept
-import com.puj.admincenter.dto.concepts.ConceptsDto
+import com.puj.admincenter.dto.concepts.ConceptDto
 import com.puj.admincenter.service.ConceptService
 
 import org.springframework.http.HttpStatus
@@ -61,7 +61,7 @@ class ConceptController(val conceptService: ConceptService) {
         consumes = ["application/json"],
         produces = ["application/json"]
     )
-    fun create(@RequestBody @Valid createConceptDto: ConceptsDto, 
+    fun create(@RequestBody @Valid createConceptDto: ConceptDto, 
                @RequestHeader(value="authorization", required=true) authorization: String): ResponseEntity<*>
         = conceptService.create(createConceptDto)
     

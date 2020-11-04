@@ -1,7 +1,7 @@
 package com.puj.admincenter.service
 
 import com.puj.admincenter.domain.concepts.Concept
-import com.puj.admincenter.dto.concepts.ConceptsDto
+import com.puj.admincenter.dto.concepts.ConceptDto
 import com.puj.admincenter.dto.IdResponseDto
 import com.puj.admincenter.repository.concepts.ConceptRepository
 import com.puj.admincenter.repository.concepts.ConceptSpecification
@@ -57,7 +57,7 @@ class ConceptService(private val conceptRepository: ConceptRepository) {
             }
         }
 
-    fun create(createConceptDto: ConceptsDto): ResponseEntity<*> {
+    fun create(createConceptDto: ConceptDto): ResponseEntity<*> {
         if (conceptRepository.existsByConceptId(createConceptDto.conceptId)) {
             val messageError = "Concept with conceptId: ${createConceptDto.conceptId} already exists."
             LOG.error(messageError)

@@ -40,6 +40,14 @@ interface UserRepository : JpaRepository<User, Int>,
     """)
     fun existsByEmail(@Param("email") email: String): Boolean
 
+        @Query("""
+        SELECT COUNT(user) > 0
+        FROM User user
+        WHERE user.username = :username
+    """)
+    fun existsByUsername(@Param("username") username: String): Boolean
+
+
     @Transactional
     @Modifying
     @Query("""

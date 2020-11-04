@@ -1,6 +1,6 @@
 package com.puj.admincenter.dto.concepts
 
-data class ConceptsDto(
+data class ConceptDto(
     val idHybrid: String?,
     val pxordx: String,
     val oldpxordx: String?,
@@ -31,5 +31,5 @@ data class ConceptsDto(
     val validEndDate:  String?,
     val invalidReason:  String?,
     val createDt: Int?,
-    val conceptState: Int
+    val conceptState: Int?
 )

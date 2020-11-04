@@ -1,7 +1,7 @@
 package com.puj.admincenter.service
 
 import com.puj.admincenter.domain.concepts.Concept
-import com.puj.admincenter.dto.concepts.ConceptsDto
+import com.puj.admincenter.dto.concepts.ConceptDto
 import com.puj.admincenter.dto.IdResponseDto
 import com.puj.admincenter.repository.concepts.ConceptRepository
 import com.puj.admincenter.repository.concepts.ConceptSpecification
@@ -57,7 +57,9 @@ class ConceptService(private val conceptRepository: ConceptRepository) {
             }
         }
 
-    fun create(createConceptDto: ConceptsDto): ResponseEntity<*> {
+    fun create(createConceptDto: ConceptDto): ResponseEntity<*> {
+        val fieldDeletedValue = 0
+        val fieldExistsValue = 1
         if (conceptRepository.existsByConceptId(createConceptDto.conceptId)) {
             val messageError = "Concept with conceptId: ${createConceptDto.conceptId} already exists."
             LOG.error(messageError)
@@ -122,20 +124,22 @@ class ConceptService(private val conceptRepository: ConceptRepository) {
             conceptRepository.deleteConceptByConceptId(conceptId,fieldDeletedValue) 
             val concept = conceptRepository.selectConceptByConceptId(conceptId)
             return if (concept != null) {
-                ResponseEntity.ok(concept)
+                val message =  "Concept with conceptId: ${conceptId} was deleted."
+                LOG.info(message)
+                ResponseEntity.ok(message)
             } else {
                 ResponseEntity<Any>(HttpStatus.NOT_FOUND)
             }
         }
         else {
-            val messageError = "Concept with conceptId: ${conceptId} doesn't exists."
+            val messageError = "Concept with conceptId: ${conceptId} doesn't exist."
             LOG.error(messageError)
             return ResponseEntity<Any>(messageError,
                                        HttpStatus.CONFLICT)
         }
     }
 
-    fun modify(modifyConceptDto: ConceptsDto,authorization: String): ResponseEntity<*> {
+    fun modify(modifyConceptDto: ConceptDto,authorization: String): ResponseEntity<*> {
         val fieldDeletedValue = 0
         val fieldExistsValue = 1
         if (!conceptRepository.existsLogicallyByConceptId(modifyConceptDto.conceptId,fieldExistsValue)) {
@@ -144,8 +148,8 @@ class ConceptService(private val conceptRepository: ConceptRepository) {
             return ResponseEntity<Any>(messageError,
                                        HttpStatus.CONFLICT)
         }
-
-        val concept = conceptRepository.updateConceptByConceptId(modifyConceptDto)
+        val newIdHybrid = modifyConceptDto.code + modifyConceptDto.conceptId + modifyConceptDto.vocabularyId
+        val concept = conceptRepository.updateConceptByConceptId(modifyConceptDto,newIdHybrid)
         val message = "Concept with conceptId ${modifyConceptDto.conceptId} was updated"
         LOG.info(message)
 

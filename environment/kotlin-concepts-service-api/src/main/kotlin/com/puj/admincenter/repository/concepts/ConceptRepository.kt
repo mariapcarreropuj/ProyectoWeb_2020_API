@@ -1,7 +1,7 @@
 package com.puj.admincenter.repository.concepts
 
 import com.puj.admincenter.domain.concepts.Concept
-import com.puj.admincenter.dto.concepts.ConceptsDto
+import com.puj.admincenter.dto.concepts.ConceptDto
 import org.springframework.stereotype.Repository
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor
@@ -63,7 +63,7 @@ interface ConceptRepository : JpaRepository<Concept, Int>,
     @Modifying
     @Query("""
         UPDATE Concept concept 
-        SET idHybrid = :#{#modifyConceptDto.idHybrid},
+        SET idHybrid = :#{#idHybrid},
         pxordx = :#{#modifyConceptDto.pxordx},
         oldpxordx = :#{#modifyConceptDto.oldpxordx},
         codetype = :#{#modifyConceptDto.codetype},
@@ -95,7 +95,7 @@ interface ConceptRepository : JpaRepository<Concept, Int>,
         createDt = :#{#modifyConceptDto.createDt}
         WHERE concept.conceptId = :#{#modifyConceptDto.conceptId}
     """)
-    fun updateConceptByConceptId(modifyConceptDto: ConceptsDto): Int
+    fun updateConceptByConceptId(modifyConceptDto: ConceptDto, idHybrid: String): Int
 
     @Query("""
         SELECT concept
@@ -103,6 +103,8 @@ interface ConceptRepository : JpaRepository<Concept, Int>,
         WHERE concept.conceptId = :conceptId
     """)
     fun selectConceptByConceptId(conceptId: Int): Concept
+
+    
 }
 
 /* class ConceptSpecification(private val vocabularyId : String?,
