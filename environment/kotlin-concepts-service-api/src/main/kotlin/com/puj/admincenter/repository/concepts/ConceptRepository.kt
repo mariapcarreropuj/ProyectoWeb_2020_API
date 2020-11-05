@@ -45,20 +45,6 @@ interface ConceptRepository : JpaRepository<Concept, Int>,
     """)
     fun deleteConceptByConceptId(conceptId: Int, FieldUpdateValue: Int): Int
 
-/*     @Transactional
-    @Modifying
-    @Query("""
-        INSERT INTO Concept concept (concept.idHybrid, concept.pxordx, concept.oldpxordx, concept.codetype, concept.conceptClassId, concept.conceptId, concept.vocabularyId, concept.domainId, concept.track, concept.standardConcept,
-        concept.code, concept.codewithperiods, concept.codescheme, concept.longDesc, concept.shortDesc, concept.codeStatus, concept.codeChange, concept.codeChangeYear, concept.codePlannedType, concept.codeBillingStatus, concept.codeCmsClaimStatus, concept.sexCd,   concept.anatOrCond,
-        concept.poaCodeStatus, concept.poaCodeChange, concept.poaCodeChangeYear,  concept.validStartDate, concept.validEndDate, concept.invalidReason, concept.createDt, concept.conceptState) VALUES (:idHybrid, :pxordx,  :oldpxordx, :codetype, :conceptClassId, :conceptId, :vocabularyId, :domainId, :track, :standardConcept, :code, :codewithperiods, :codescheme, :longDesc, :shortDesc, :codeStatus, :codeChange, :codeChangeYear,  :codePlannedType, :codeBillingStatus, :codeCmsClaimStatus, :sexCd, :anatOrCond,
-   :poaCodeStatus, :poaCodeChange, :poaCodeChangeYear, :validStartDate, :validEndDate, :invalidReason, :createDt, :conceptState)""")
-    fun createConceptByConceptId(idHybrid: String, pxordx: String, oldpxordx: String?, codetype: String,
-    conceptClassId: String?, conceptId: Int, vocabularyId: String, domainId: String, track: String?, standardConcept: String?, code: String,
-    codewithperiods: String?, codescheme: String?, longDesc: String?, shortDesc: String?, codeStatus: String?, codeChange: String?,
-    codeChangeYear: String?, codePlannedType: String?, codeBillingStatus: String?, codeCmsClaimStatus: String?, sexCd: String?, anatOrCond: String?,
-    poaCodeStatus: String?, poaCodeChange: String?, poaCodeChangeYear: String?, validStartDate: String?, validEndDate: String?, invalidReason: String?,
-     createDt: Int?, conceptState: String): Int
- */
     @Transactional
     @Modifying
     @Query("""
@@ -106,17 +92,3 @@ interface ConceptRepository : JpaRepository<Concept, Int>,
 
     
 }
-
-/* class ConceptSpecification(private val vocabularyId : String?,
-                           private val conceptId : Int?,
-                           private val domainId : String?,
-                           private val shortDesc : String?) : Specification<Concept> {
-    override fun toPredicate(root : Root<Concept>, query : CriteriaQuery<*>, cb : CriteriaBuilder): Predicate {
-        val p = mutableListOf<Predicate>()
-        vocabularyId?.let {p.add(cb.equal(root.get<String>("vocabularyId"), vocabularyId)) }
-        conceptId?.let {p.add(cb.equal(root.get<Int>("conceptId"), conceptId)) }
-        domainId?.let {p.add(cb.equal(root.get<String>("domainId"), domainId)) }
-        shortDesc?.let {p.add(cb.like(root.get<String>("shortDesc"), "%$shortDesc%")) }
-        return cb.and(*p.toTypedArray())
-    }
-} */

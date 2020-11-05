@@ -22,22 +22,6 @@ class ConceptService(private val conceptRepository: ConceptRepository) {
     companion object {
         val LOG = LoggerFactory.getLogger(ConceptService::class.java)!!
     }
-
-/*     fun count(): Long {
-        return conceptRepository.count()
-    }
-
-    fun getById(userId: Int,
-                authorization: String): ResponseEntity<*> {
-
-        val user = userRepository.findById(userId)  // Hace solo el query
-        return if (user.isPresent()) {
-            ResponseEntity.ok(UserDto.convert(user.get()))
-        } else {
-            ResponseEntity<Any>(HttpStatus.NOT_FOUND)
-        }
-    }
-     */
     fun getAllConcepts(vocabularyId : String?,
                         conceptId : Int?,
                         domainId : String?,
@@ -100,19 +84,9 @@ class ConceptService(private val conceptRepository: ConceptRepository) {
                         conceptState = 1)
         val conceptSaved = conceptRepository.save(concept)
 
-        /* val concept = conceptRepository.createConceptByConceptId(createConceptDto.idHybrid,createConceptDto.pxordx, createConceptDto.oldpxordx,
-        createConceptDto.codetype, createConceptDto.conceptClassId, createConceptDto.conceptId.toInt(), createConceptDto.vocabularyId, 
-        createConceptDto.domainId, createConceptDto.track, createConceptDto.standardConcept, createConceptDto.code, createConceptDto.codewithperiods,
-        createConceptDto.codescheme, createConceptDto.longDesc, createConceptDto.shortDesc, createConceptDto.codeStatus, createConceptDto.codeChange,
-        createConceptDto.codeChangeYear, createConceptDto.codePlannedType,createConceptDto.codeBillingStatus,createConceptDto.codeCmsClaimStatus,
-        createConceptDto.sexCd,createConceptDto.anatOrCond, createConceptDto.poaCodeStatus,createConceptDto.poaCodeChange,createConceptDto.poaCodeChangeYear,
-        createConceptDto.validStartDate, createConceptDto.validEndDate, createConceptDto.invalidReason, createConceptDto.createDt.toInt(),"exists") */
-/*         LOG.info("Concept ${createConceptDto.conceptId} created with id ${conceptSaved.id}")*/
-
         val responseDto = IdResponseDto(conceptSaved.id.toLong())
         return ResponseEntity<IdResponseDto>(responseDto,
                                              HttpStatus.CREATED)
-       /*  return ResponseEntity.ok(concept) */
     }
 
 
@@ -135,7 +109,7 @@ class ConceptService(private val conceptRepository: ConceptRepository) {
             val messageError = "Concept with conceptId: ${conceptId} doesn't exist."
             LOG.error(messageError)
             return ResponseEntity<Any>(messageError,
-                                       HttpStatus.CONFLICT)
+                                       HttpStatus.NOT_FOUND)
         }
     }
 
