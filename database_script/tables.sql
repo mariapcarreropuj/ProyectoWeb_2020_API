@@ -9,6 +9,8 @@ CREATE TABLE `vocabularies` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
+CREATE DATABASE `ConceptsDB` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
 CREATE TABLE ConceptsDB.`concepts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `idHybrid` char(255) NOT NULL,
@@ -44,6 +46,8 @@ CREATE TABLE ConceptsDB.`concepts` (
   `conceptState` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+CREATE DATABASE `UsersDB` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 CREATE TABLE UsersDB.`user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
